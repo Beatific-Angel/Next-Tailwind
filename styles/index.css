@@ -1,0 +1,132 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+html,
+body {
+  @apply bg-gray-50 dark:bg-gray-900;
+}
+
+/* Write your own custom component styles here */
+.btn-blue {
+  @apply px-4 py-2 font-bold text-white bg-blue-500 rounded;
+}
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
+
+.nav-bar {
+  background-color: #468189;
+  width: 200px;
+}
+
+.main-container {
+	margin-left: 200px;
+}
+
+.text-footer {
+	color: rgb(213 213 213);
+}
+
+.bg-black {
+	background-color: rgb(27,27,26) !important;
+}
+
+.footer-link {
+	transition: color 0.4s ease 0s;
+}
+
+.footer-link:hover {
+	color: rgb(87,86,86) !important;
+}
+
+.mobile-menu {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 200;
+}
+
+.toggle {
+    outline: 0;
+    border: 0;
+    display: inline-block;
+    background-color: transparent;
+    background-image: none;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 30px;
+    margin-left: auto;
+}
+
+.toggle:focus {
+	outline: none;
+}
+
+.toggle .icon:before {
+    top: -8px;
+}
+
+.toggle.active .icon:before {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.toggle .icon:after {
+    top: 8px;
+}
+
+.toggle.active .icon:after {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.toggle .icon:after, .toggle .icon:before {
+    position: absolute;
+    content: '';
+}
+
+.toggle .icon, .toggle .icon:after, .toggle .icon:before {
+    display: block;
+    width: 24px;
+    height: 3px;
+    transition: background-color .3s linear,transform .3s linear;
+    background-color: white;
+}
+
+.toggle .icon {
+    position: relative;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.toggle.active .icon {
+    background-color: transparent;
+}
+
+.mobile-nav-menu {
+	display: none;
+	z-index: 50;
+}
+
+.mobile-nav-menu.open {
+	display: block;
+}
+
+@media (max-width: 767px) {
+	.main-container {
+		margin-left: 0;
+	}
+}

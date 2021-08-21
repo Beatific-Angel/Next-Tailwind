@@ -1,0 +1,21 @@
+@font-face {
+	font-family: Poppins-SemiBold;
+	src: url('./Poppins-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: Avenir-Light;
+	src: url('./Avenir-Light.ttf');
+}
+
+.font-poppins-semibold {
+	font-family: Poppins-SemiBold;
+}
+
+.font-avenir-light {
+	font-family: Avenir-Light;
+}
+
+body {
+	font-size: 18px;
+}
